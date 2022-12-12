@@ -7,3 +7,4 @@ d = dict(col.find_one({'name': 'x'}))
 
 while d['run'] < 19:
     print(d)
+    d = dict(col.find_one({'name': 'x'}))
