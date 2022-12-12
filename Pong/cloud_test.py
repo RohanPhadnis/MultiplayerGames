@@ -1,9 +1,12 @@
+import time
 import pymongo
 
 mongo = pymongo.MongoClient('mongodb+srv://anyone:xyz@flask.ngjrl.mongodb.net/MultiplayerGames?retryWrites=true&w=majority')
 db = mongo['test']
 col = db['game_objects']
 d = {'name': 'x', 'num': 0, 'run': 0}
+col.insert_one(d)
+time.sleep(5)
 run = 0
 
 while run < 30:
